@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricky's Knowledge Graph</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #2c3e50; }
+        .subtitle { color: #7f8c8d; margin-bottom: 40px; }
+        .domain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .domain-card { padding: 24px; background: #f8f9fa; border-radius: 12px; text-decoration: none; color: inherit; transition: transform 0.2s, box-shadow 0.2s; }
+        .domain-card:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .domain-card h2 { font-size: 1.25rem; margin-bottom: 8px; color: #34495e; }
+        .domain-card p { font-size: 0.9rem; color: #7f8c8d; }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; color: #95a5a6; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <h1>Knowledge Graph</h1>
+    <p class="subtitle">Personal knowledge sharing platform</p>
+    
+    <div class="domain-grid">
+        <a href="./artificial_intelligence/" class="domain-card">
+            <h2>Artificial Intelligence</h2>
+            <p>AI, ML, LLM Applications</p>
+        </a>
+        <a href="./architecture/" class="domain-card">
+            <h2>Architecture</h2>
+            <p>System Design, Technical Decisions</p>
+        </a>
+        <a href="./engineering/" class="domain-card">
+            <h2>Engineering</h2>
+            <p>Software Engineering, Best Practices</p>
+        </a>
+        <a href="./leadership/" class="domain-card">
+            <h2>Leadership</h2>
+            <p>Tech Management, Team Building</p>
+        </a>
+        <a href="./values/" class="domain-card">
+            <h2>Values</h2>
+            <p>Career Philosophy, Principles</p>
+        </a>
+    </div>
+    
+    <footer>
+        <p>© 2026 Ricky Chen. All rights reserved.</p>
+    </footer>
+</body>
+</html>
