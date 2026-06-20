@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Knowledge Graph</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; color: #1a1a1a; }
+        nav { margin-bottom: 30px; }
+        nav a { color: #3498db; text-decoration: none; margin-right: 20px; }
+        nav a:hover { text-decoration: underline; }
+        h1 { font-size: 2rem; margin-bottom: 10px; color: #2c3e50; }
+        h2 { font-size: 1.5rem; margin: 20px 0 10px; color: #34495e; }
+        .subtitle { color: #7f8c8d; margin-bottom: 30px; }
+        .post-list { list-style: none; }
+        .post-item { padding: 15px 0; border-bottom: 1px solid #eee; }
+        .post-item:last-child { border-bottom: none; }
+        .post-title { font-size: 1.2rem; color: #2c3e50; text-decoration: none; }
+        .post-title:hover { text-decoration: underline; }
+        .post-meta { color: #95a5a6; font-size: 0.85rem; margin-top: 5px; }
+        .content { line-height: 1.6; margin-top: 20px; }
+        .content p { margin-bottom: 15px; }
+        .content code { background: #f4f4f4; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+        .content pre { background: #f4f4f4; padding: 15px; border-radius: 6px; overflow-x: auto; }
+        .content blockquote { border-left: 4px solid #3498db; padding-left: 15px; margin: 15px 0; color: #7f8c8d; }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #eee; color: #95a5a6; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{{ site.baseurl }}/">Home</a>
+        <a href="{{ site.baseurl }}/artificial_intelligence/">AI</a>
+        <a href="{{ site.baseurl }}/architecture/">Architecture</a>
+        <a href="{{ site.baseurl }}/engineering/">Engineering</a>
+        <a href="{{ site.baseurl }}/leadership/">Leadership</a>
+        <a href="{{ site.baseurl }}/values/">Values</a>
+    </nav>
+    
+    {{ content }}
+    
+    <footer>
+        <p>© 2026 Ricky Chen. All rights reserved.</p>
+    </footer>
+</body>
+</html>
