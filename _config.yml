@@ -4,6 +4,3 @@ baseurl: "/ricky-knowledge-graph"
 url: "https://chensanren.github.io"
 
 markdown: kramdown
-theme: jekyll-theme-minimal
-plugins:
-  - jekyll-feed
