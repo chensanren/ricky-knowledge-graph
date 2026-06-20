@@ -9,14 +9,17 @@ category: engineering
 
 <h2>Posts</h2>
 <ul class="post-list">
+{% assign has_posts = false %}
 {% for post in site.posts %}
-    {% if post.category == 'engineering' %}
+{% if post.category == 'engineering' %}
+    {% assign has_posts = true %}
     <li class="post-item">
         <a href="{{ post.url | prepend: site.baseurl }}" class="post-title">{{ post.title }}</a>
         <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
     </li>
-    {% endif %}
-{% empty %}
-    <li>No posts yet.</li>
+{% endif %}
 {% endfor %}
+{% if has_posts == false %}
+    <li>No posts yet.</li>
+{% endif %}
 </ul>
