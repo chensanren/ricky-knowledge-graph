@@ -1,7 +1,9 @@
 title: Ricky's Knowledge Graph
 description: Personal knowledge sharing platform
-baseurl: "/ricky-knowlege-graph"
+baseurl: "/ricky-knowledge-graph"
 url: "https://chensanren.github.io"
 
 markdown: kramdown
-theme: minima
+theme: jekyll-theme-minimal
+plugins:
+  - jekyll-feed
