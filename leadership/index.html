@@ -1,25 +1,17 @@
 ---
-layout: default
+layout: page
 title: Leadership
-category: leadership
 ---
 
-<h1>Leadership</h1>
-<p class="subtitle">Tech Management, Team Building, Leadership and Organization Development</p>
+## Posts
 
-<h2>Posts</h2>
-<ul class="post-list">
-{% assign has_posts = false %}
+<ul>
 {% for post in site.posts %}
 {% if post.category == 'leadership' %}
-    {% assign has_posts = true %}
-    <li class="post-item">
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-title">{{ post.title }}</a>
-        <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-    </li>
+  <li>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    <span style="color: #666; font-size: 0.8em;"> - {{ post.date | date_to_string }}</span>
+  </li>
 {% endif %}
 {% endfor %}
-{% if has_posts == false %}
-    <li>No posts yet.</li>
-{% endif %}
 </ul>

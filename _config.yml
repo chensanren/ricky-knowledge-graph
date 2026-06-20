@@ -4,12 +4,7 @@ baseurl: "/ricky-knowledge-graph"
 url: "https://chensanren.github.io"
 
 markdown: kramdown
-theme: hyde
 highlighter: rouge
-
-hyde:
-  theme: "base-16-light"
-  layout: "side"
 
 exclude:
   - Gemfile

@@ -1,48 +1,25 @@
 ---
-layout: default
+layout: page
 title: Knowledge Graph
 ---
 
-<h1>Knowledge Graph</h1>
-<p class="subtitle">Personal knowledge sharing platform</p>
+Welcome to my personal knowledge sharing platform. Here you'll find my thoughts and learnings across various domains.
 
-<h2>Latest Posts</h2>
-<ul class="post-list">
-{% assign post_count = 0 %}
-{% for post in site.posts %}
-{% if post_count < 5 %}
-    <li class="post-item">
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-title">{{ post.title }}</a>
-        <p class="post-meta">{{ post.date | date: "%B %d, %Y" }} | {{ post.category }}</p>
-    </li>
-    {% assign post_count = post_count | plus: 1 %}
-{% endif %}
+## Latest Posts
+
+<ul>
+{% for post in site.posts limit: 5 %}
+  <li>
+    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    <span style="color: #666; font-size: 0.8em;"> - {{ post.date | date_to_string }}</span>
+  </li>
 {% endfor %}
-{% if post_count == 0 %}
-    <li>No posts yet. Start writing!</li>
-{% endif %}
 </ul>
 
-<h2>Knowledge Domains</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px;">
-    <a href="{{ site.baseurl }}/artificial_intelligence/" style="padding: 20px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit;">
-        <h3 style="margin-bottom: 5px;">Artificial Intelligence</h3>
-        <p style="font-size: 0.9rem; color: #7f8c8d;">AI, ML, LLM Applications</p>
-    </a>
-    <a href="{{ site.baseurl }}/architecture/" style="padding: 20px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit;">
-        <h3 style="margin-bottom: 5px;">Architecture</h3>
-        <p style="font-size: 0.9rem; color: #7f8c8d;">System Design, Technical Decisions</p>
-    </a>
-    <a href="{{ site.baseurl }}/engineering/" style="padding: 20px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit;">
-        <h3 style="margin-bottom: 5px;">Engineering</h3>
-        <p style="font-size: 0.9rem; color: #7f8c8d;">Software Engineering</p>
-    </a>
-    <a href="{{ site.baseurl }}/leadership/" style="padding: 20px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit;">
-        <h3 style="margin-bottom: 5px;">Leadership</h3>
-        <p style="font-size: 0.9rem; color: #7f8c8d;">Tech Management</p>
-    </a>
-    <a href="{{ site.baseurl }}/values/" style="padding: 20px; background: #f8f9fa; border-radius: 8px; text-decoration: none; color: inherit;">
-        <h3 style="margin-bottom: 5px;">Values</h3>
-        <p style="font-size: 0.9rem; color: #7f8c8d;">Career Philosophy</p>
-    </a>
-</div>
+## Knowledge Domains
+
+- **Artificial Intelligence**: AI, Machine Learning, LLM Applications
+- **Architecture**: System Design, Technical Decisions
+- **Engineering**: Software Engineering Best Practices
+- **Leadership**: Tech Management, Team Building
+- **Values**: Career Philosophy, Principles
